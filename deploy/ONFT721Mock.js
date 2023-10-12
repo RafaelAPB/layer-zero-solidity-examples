@@ -11,7 +11,7 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
     console.log({ onftArgs })
     console.log(`[${hre.network.name}] Endpoint Address: ${lzEndpointAddress}`)
 
-    await deploy("ONFT721", {
+    await deploy("ONFT721Mock", {
         from: deployer,
         args: ["BD token", "BD", "20000", lzEndpointAddress],
         log: true,
@@ -19,4 +19,4 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
     })
 }
 
-module.exports.tags = ["ONFT721"]
+module.exports.tags = ["ONFT721Mock"]
